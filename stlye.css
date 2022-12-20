@@ -1,0 +1,126 @@
+body {
+    max-width: 100vw;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Manrope";
+    font-weight: 800;
+    background-color: hsl(218, 23%, 16%);
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("./Manrope-VariableFont_wght.ttf");
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 12% 30%;
+    background-color: hsl(217, 19%, 24%);
+    overflow:visible; /* para que me deje ver si la parte que se sale del elemento del div */
+}
+
+.text{
+    max-width: 100%;
+    padding: 4% 6% 4% 6%;
+    text-align: center;
+}
+
+.text h1 {
+    font-size: 16px;
+    color: hsl(150, 100%, 66%);
+    letter-spacing: 0.3ch;
+}
+
+.text h2 {
+    font-size: 28px;
+    color: hsl(193, 38%, 86%);
+}
+
+.img1 {
+    width: 84%;
+    padding: 0% 8% 6% 8%;
+    margin-bottom: 3%;
+    display: flex;
+} /* con width y padding puedo centrar un div*/
+
+.img2 {
+    display: none;
+}
+
+.imagenes {
+    width: auto;
+    margin-bottom: -6.2% ; /* para que se salga debo ponerlo en el div que contiene el elmento */
+    text-align: center; /* esto me sirve para centrar el botton*/
+}
+
+.imagenes button {
+    background-image: url("images/icon-dice.svg");
+    background-color: hsl(150, 100%, 66%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    border-radius: 50%;
+    border-style: none;
+    height: 55px;
+    width: 55px; /* en el tamaño del boton debo poner los dos en % o px... sino se me distorciona con el cambio de screen*/
+}
+
+.imagenes button:hover {
+    cursor: url("pointer.png"), auto;
+    filter: drop-shadow(1px 3px 12px hsl(150, 100%, 66%));/* con este creo el efecto en el boton*/
+}
+
+
+@media (max-width : 600px ) {
+    body {
+        width: 90vw;
+    }
+    
+    main {
+        width: 100%;
+        margin: 25% 5%;
+    }
+    
+    
+    .img1 {
+        display: none;
+    }
+    
+    .img2 {
+        width: 84%;
+    padding: 0% 8% 6% 8%;
+    margin-bottom: 3%;
+    display: flex;
+    }
+    
+}
+
+
+@media (min-width : 601px) and (max-width : 1000px)  {
+    
+    body {
+        max-width: 100%;
+    }
+    
+    main {
+        width: 70vw;
+        margin: 15% 15%;
+    }
+    
+    
+    .img1 {
+        display: none;
+    }
+    
+    .img2 {
+        width: 84%;
+        padding: 0% 8% 6% 8%;
+        margin-bottom: 3%;
+        display: flex;
+
+    }
+    
+}
+
